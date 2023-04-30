@@ -1,0 +1,69 @@
+######## FEATURES ########
+
+START: 2023-04-27 10:39:25.964527
+REAL RETURN
+['roi', 'roa', 'roe', 'return-on-tangible-equity', 'common-stock-net', 'asset-turnover', 'eps-basic-net-earnings-per-share', 'eps-earnings-per-share-diluted', 'net-income', 'income-after-taxes', 'income-from-continuous-operations', 'pre-tax-profit-margin', 'long-term-debt', 'pre-tax-income', 'net-profit-margin', 'net-income-loss', 'ebit', 'goodwill-intangible-assets-total', 'total-provision-income-taxes', 'operating-income', 'operating-margin', 'ebit-margin', 'basic-shares-outstanding', 'long-term-debt-capital', 'shares-outstanding', 'debt-equity-ratio', 'total-non-operating-income-expense', 'total-long-term-assets', 'net-common-equity-issued-repurchased', 'net-total-equity-issued-repurchased', 'book-value-per-share', 'total-assets', 'total-liabilities-share-holders-equity', 'total-long-term-liabilities', 'gross-margin', 'ebitda', 'net-property-plant-equipment', 'current-ratio', 'total-depreciation-amortization-cash-flow', 'net-long-term-debt']
+RISK
+['roi', 'roe', 'roa', 'common-stock-net', 'ebit', 'eps-basic-net-earnings-per-share', 'asset-turnover', 'operating-margin', 'ebit-margin', 'ebitda', 'shares-outstanding', 'income-from-continuous-operations', 'net-income', 'eps-earnings-per-share-diluted', 'operating-income', 'pre-tax-income', 'net-income-loss', 'income-after-taxes', 'net-profit-margin', 'total-provision-income-taxes', 'pre-tax-profit-margin', 'goodwill-intangible-assets-total', 'book-value-per-share', 'receiveable-turnover', 'total-share-holder-equity', 'return-on-tangible-equity', 'receivables-total', 'days-sales-in-receivables', 'total-common-preferred-stock-dividends-paid', 'long-term-debt', 'basic-shares-outstanding', 'total-assets', 'total-liabilities-share-holders-equity', 'current-ratio', 'gross-margin', 'cash-on-hand', 'long-term-debt-capital', 'total-current-assets', 'total-long-term-assets', 'inventory-turnover']
+
+######## SSCAS ########
+
+[(2, 0.82), (3, 0.63), (4, 0.56), (5, 0.54), (6, 0.48)]
+
+######## CLASSIFICADORES UNICOS ########
+RANDOM FOREST:(0.8392577418966141,0.5143993252199061)
+SVM:(0.7269550548258826,0.42824436679117966)
+DECISION TREE:(0.8350403663091939,0.4741535124713821)
+NAIVE BAYES:(0.4149897578021448,0.37149054102903967)
+NEURAL NETWORK:(0.7149054102903964,0.4741535124713821)
+LOGISTIC REGRESSION:(0.7910591637546692,0.42800337390046994)
+KNEIGHBORS:(0.6285094589709603,0.4386070610916978)
+XGBOOST:(0.8311844800578383,0.507410531389324)
+
+######## CV ########
+Real Return: {'RANDOM_FOREST': 0.8190481039068123, 'SVM': 0.6466274168687718, 'DECISION_TREE': 0.8359202021416646, 'NAIVE_BAYES': 0.4250486067623133, 'NEURAL_NETWORK': 0.7034186209578304, 'LOGISTIC_REGRESSION': 0.738942379318584, 'KNeighborsClassifier': 0.5652302750244791, 'XG_BOOST': 0.7796913372989163}
+Risk: {'RANDOM_FOREST': 0.4650839315804186, 'SVM': 0.39640041352837463, 'DECISION_TREE': 0.45915815430167894, 'NAIVE_BAYES': 0.39292547900109787, 'NEURAL_NETWORK': 0.42714954329164206, 'LOGISTIC_REGRESSION': 0.4135540171439369, 'KNeighborsClassifier': 0.39987886179750537, 'XG_BOOST': 0.4527534305832968}
+
+######## CLASSIFIERS SELECTION ########
+Real Return: ['RANDOM_FOREST', 'DECISION_TREE', 'NEURAL_NETWORK', 'LOGISTIC_REGRESSION', 'XG_BOOST']
+Risk: ['RANDOM_FOREST', 'DECISION_TREE', 'XG_BOOST']
+
+######## WHITOUT DIVERSITY ########
+Real Return: RANDOM_FOREST, 0.8398602241233883
+Real Return: DECISION_TREE, 0.8350403663091939
+Real Return: NEURAL_NETWORK, 0.6912881070008434
+Real Return: LOGISTIC_REGRESSION, 0.7910591637546692
+Real Return: XG_BOOST, 0.8311844800578383
+Risk: RANDOM_FOREST, 0.5137968429931317
+Risk: DECISION_TREE, 0.4741535124713821
+Risk: XG_BOOST, 0.507410531389324
+
+######## BAGGING ########
+Real Return: RANDOM_FOREST, 0.8404627063501626
+Real Return: DECISION_TREE, 0.8347993734184842
+Real Return: NEURAL_NETWORK, 0.722255693457043
+Real Return: LOGISTIC_REGRESSION, 0.7938305819978311
+Real Return: XG_BOOST, 0.8346788769731293
+Risk: RANDOM_FOREST, 0.5145198216652609
+Risk: DECISION_TREE, 0.48632365345222317
+Risk: XG_BOOST, 0.5110254247499699
+
+######## ADABOOST ########
+RealReturn: RANDOM_FOREST, 0.8369683094348717
+RealReturn: DECISION_TREE, 0.7741896614049886
+RealReturn: LOGISTIC_REGRESSION, 0.5421135076515243
+RealReturn: XG_BOOST, 0.3214845162067719
+Risk: RANDOM_FOREST, 0.5028316664658392
+Risk: DECISION_TREE, 0.46535727196047716
+Risk: XG_BOOST, 0.30075912760573564
+
+######## FUSION ########
+[WHITOUT] [XG_BOOST] RealReturn: 0.9295310853530031
+[WHITOUT] [XG_BOOST] Risk: 0.7453898840885143
+[BAGGING] [XG_BOOST] RealReturn: 0.9188619599578504
+[BAGGING] [XG_BOOST] Risk: 0.744204425711275
+[ADABOOST] [XG_BOOST] RealReturn: 0.9299262381454162
+[ADABOOST] [XG_BOOST] Risk: 0.8382507903055848
+
+END: 2023-04-27 15:38:10.629355
+TOTAL EXEC: 4:58:44.664828
