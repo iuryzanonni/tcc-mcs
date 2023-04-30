@@ -1,0 +1,71 @@
+######## FEATURES ########
+
+START: 2023-04-27 18:32:20.040792
+REAL RETURN
+['roi', 'roa', 'roe', 'return-on-tangible-equity', 'common-stock-net', 'asset-turnover', 'eps-basic-net-earnings-per-share', 'eps-earnings-per-share-diluted', 'net-income', 'income-after-taxes', 'income-from-continuous-operations', 'pre-tax-profit-margin', 'long-term-debt', 'pre-tax-income', 'net-profit-margin', 'net-income-loss', 'ebit', 'goodwill-intangible-assets-total', 'total-provision-income-taxes', 'operating-income', 'operating-margin', 'ebit-margin', 'basic-shares-outstanding', 'long-term-debt-capital', 'shares-outstanding', 'debt-equity-ratio', 'total-non-operating-income-expense', 'total-long-term-assets', 'net-common-equity-issued-repurchased', 'net-total-equity-issued-repurchased', 'book-value-per-share', 'total-assets', 'total-liabilities-share-holders-equity', 'total-long-term-liabilities', 'gross-margin', 'ebitda', 'net-property-plant-equipment', 'current-ratio', 'total-depreciation-amortization-cash-flow', 'net-long-term-debt', 'total-liabilities', 'retained-earnings-accumulated-deficit', 'receiveable-turnover', 'total-share-holder-equity', 'common-stock-dividends-paid', 'days-sales-in-receivables', 'total-common-preferred-stock-dividends-paid', 'debt-issuance-retirement-net-total', 'stock-based-compensation', 'selling-general-administrative-expenses', 'total-current-assets', 'free-cash-flow-per-share', 'receivables-total', 'total-current-liabilities', 'inventory', 'other-long-term-assets', 'total-non-cash-items', 'long-term-investments', 'investing-activities-other', 'other-non-current-liabilities']
+RISK
+['roi', 'roe', 'roa', 'common-stock-net', 'ebit', 'eps-basic-net-earnings-per-share', 'asset-turnover', 'operating-margin', 'ebit-margin', 'ebitda', 'shares-outstanding', 'income-from-continuous-operations', 'net-income', 'eps-earnings-per-share-diluted', 'operating-income', 'pre-tax-income', 'net-income-loss', 'income-after-taxes', 'net-profit-margin', 'total-provision-income-taxes', 'pre-tax-profit-margin', 'goodwill-intangible-assets-total', 'book-value-per-share', 'receiveable-turnover', 'total-share-holder-equity', 'return-on-tangible-equity', 'receivables-total', 'days-sales-in-receivables', 'total-common-preferred-stock-dividends-paid', 'long-term-debt', 'basic-shares-outstanding', 'total-assets', 'total-liabilities-share-holders-equity', 'current-ratio', 'gross-margin', 'cash-on-hand', 'long-term-debt-capital', 'total-current-assets', 'total-long-term-assets', 'inventory-turnover', 'common-stock-dividends-paid', 'cash-flow-from-operating-activities', 'total-current-liabilities', 'total-non-operating-income-expense', 'debt-equity-ratio', 'inventory', 'financial-activities-other', 'investing-activities-other', 'total-non-cash-items', 'research-development-expenses', 'change-in-inventories', 'revenue', 'total-depreciation-amortization-cash-flow', 'cost-goods-sold', 'retained-earnings-accumulated-deficit', 'total-long-term-liabilities', 'total-liabilities', 'debt-issuance-retirement-net-total', 'change-in-assets-liabilities', 'cash-flow-from-investing-activities']
+
+######## SSCAS ########
+
+[(2, 0.82), (3, 0.63), (4, 0.51), (5, 0.47), (6, 0.42)]
+
+######## CLASSIFICADORES UNICOS ########
+RANDOM FOREST:(0.8404627063501626,0.5205446439330039)
+SVM:(0.7286420050608508,0.43945053620918184)
+DECISION TREE:(0.8338354018556453,0.4711411013375105)
+NAIVE BAYES:(0.4386070610916978,0.41752018315459694)
+NEURAL NETWORK:(0.6929750572358115,0.4711411013375105)
+LOGISTIC REGRESSION:(0.813953488372093,0.43836606820098806)
+KNEIGHBORS:(0.6162188215447645,0.4386070610916978)
+XGBOOST:(0.8328714302928064,0.5128328714302928)
+
+######## CV ########
+Real Return: {'RANDOM_FOREST': 0.8135949170991171, 'SVM': 0.6439401851820039, 'DECISION_TREE': 0.8326013870691178, 'NAIVE_BAYES': 0.4301857598193468, 'NEURAL_NETWORK': 0.7100589215467336, 'LOGISTIC_REGRESSION': 0.7734803066481557, 'KNeighborsClassifier': 0.5417159553551769, 'XG_BOOST': 0.7713132649220809}
+Risk: {'RANDOM_FOREST': 0.46974713551955755, 'SVM': 0.4049758176477295, 'DECISION_TREE': 0.4689194228718046, 'NAIVE_BAYES': 0.4150137972930133, 'NEURAL_NETWORK': 0.43805515169214004, 'LOGISTIC_REGRESSION': 0.42394693156636365, 'KNeighborsClassifier': 0.40133961017767045, 'XG_BOOST': 0.46235798626673513}
+
+######## CLASSIFIERS SELECTION ########
+Real Return: ['RANDOM_FOREST', 'DECISION_TREE', 'NEURAL_NETWORK', 'LOGISTIC_REGRESSION', 'XG_BOOST']
+Risk: ['RANDOM_FOREST', 'DECISION_TREE', 'NEURAL_NETWORK', 'XG_BOOST']
+
+######## WHITOUT DIVERSITY ########
+Real Return: RANDOM_FOREST, 0.8411856850222919
+Real Return: DECISION_TREE, 0.8338354018556453
+Real Return: NEURAL_NETWORK, 0.6700807326183877
+Real Return: LOGISTIC_REGRESSION, 0.813953488372093
+Real Return: XG_BOOST, 0.8328714302928064
+Risk: RANDOM_FOREST, 0.5244005301843596
+Risk: DECISION_TREE, 0.4711411013375105
+Risk: NEURAL_NETWORK, 0.45077720207253885
+Risk: XG_BOOST, 0.5128328714302928
+
+######## BAGGING ########
+Real Return: RANDOM_FOREST, 0.8399807205687432
+Real Return: DECISION_TREE, 0.8345583805277744
+Real Return: NEURAL_NETWORK, 0.6461019399927702
+Real Return: LOGISTIC_REGRESSION, 0.8122665381371249
+Real Return: XG_BOOST, 0.8401012170140981
+Risk: RANDOM_FOREST, 0.5198216652608748
+Risk: DECISION_TREE, 0.4853596818893843
+Risk: NEURAL_NETWORK, 0.44451138691408604
+Risk: XG_BOOST, 0.5217496083865526
+
+######## ADABOOST ########
+RealReturn: RANDOM_FOREST, 0.8388962525605494
+RealReturn: DECISION_TREE, 0.7873237739486685
+RealReturn: LOGISTIC_REGRESSION, 0.5819978310639836
+RealReturn: XG_BOOST, 0.3214845162067719
+Risk: RANDOM_FOREST, 0.5156042896734546
+Risk: DECISION_TREE, 0.46535727196047716
+Risk: XG_BOOST, 0.30075912760573564
+
+######## FUSION ########
+[WHITOUT] [XG_BOOST] RealReturn: 0.934799789251844
+[WHITOUT] [XG_BOOST] Risk: 0.7706796628029505
+[BAGGING] [XG_BOOST] RealReturn: 0.928609062170706
+[BAGGING] [XG_BOOST] Risk: 0.7719968387776607
+[ADABOOST] [XG_BOOST] RealReturn: 0.934536354056902
+[ADABOOST] [XG_BOOST] Risk: 0.8435194942044257
+
+END: 2023-04-27 20:47:12.315964
+TOTAL EXEC: 2:14:52.275172

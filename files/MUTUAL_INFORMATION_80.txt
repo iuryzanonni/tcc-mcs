@@ -1,0 +1,74 @@
+######## FEATURES ########
+
+START: 2023-04-27 22:46:10.305749
+REAL RETURN
+['roi', 'roa', 'roe', 'return-on-tangible-equity', 'common-stock-net', 'asset-turnover', 'eps-basic-net-earnings-per-share', 'eps-earnings-per-share-diluted', 'net-income', 'income-after-taxes', 'income-from-continuous-operations', 'pre-tax-profit-margin', 'long-term-debt', 'pre-tax-income', 'net-profit-margin', 'net-income-loss', 'ebit', 'goodwill-intangible-assets-total', 'total-provision-income-taxes', 'operating-income', 'operating-margin', 'ebit-margin', 'basic-shares-outstanding', 'long-term-debt-capital', 'shares-outstanding', 'debt-equity-ratio', 'total-non-operating-income-expense', 'total-long-term-assets', 'net-common-equity-issued-repurchased', 'net-total-equity-issued-repurchased', 'book-value-per-share', 'total-assets', 'total-liabilities-share-holders-equity', 'total-long-term-liabilities', 'gross-margin', 'ebitda', 'net-property-plant-equipment', 'current-ratio', 'total-depreciation-amortization-cash-flow', 'net-long-term-debt', 'total-liabilities', 'retained-earnings-accumulated-deficit', 'receiveable-turnover', 'total-share-holder-equity', 'common-stock-dividends-paid', 'days-sales-in-receivables', 'total-common-preferred-stock-dividends-paid', 'debt-issuance-retirement-net-total', 'stock-based-compensation', 'selling-general-administrative-expenses', 'total-current-assets', 'free-cash-flow-per-share', 'receivables-total', 'total-current-liabilities', 'inventory', 'other-long-term-assets', 'total-non-cash-items', 'long-term-investments', 'investing-activities-other', 'other-non-current-liabilities', 'cash-flow-from-financial-activities', 'cash-on-hand', 'financial-activities-other', 'net-change-in-property-plant-equipment', 'cost-goods-sold', 'income-from-discontinued-operations', 'gross-profit', 'other-non-cash-items', 'net-change-in-long-term-investments', 'comprehensive-income', 'other-operating-income-expenses', 'inventory-turnover', 'cash-flow-from-investing-activities', 'pre-paid-expenses', 'other-share-holders-equity', 'operating-cash-flow-per-share', 'revenue', 'change-in-inventories', 'research-development-expenses', 'cash-flow-from-operating-activities']
+RISK
+['roi', 'roe', 'roa', 'common-stock-net', 'ebit', 'eps-basic-net-earnings-per-share', 'asset-turnover', 'operating-margin', 'ebit-margin', 'ebitda', 'shares-outstanding', 'income-from-continuous-operations', 'net-income', 'eps-earnings-per-share-diluted', 'operating-income', 'pre-tax-income', 'net-income-loss', 'income-after-taxes', 'net-profit-margin', 'total-provision-income-taxes', 'pre-tax-profit-margin', 'goodwill-intangible-assets-total', 'book-value-per-share', 'receiveable-turnover', 'total-share-holder-equity', 'return-on-tangible-equity', 'receivables-total', 'days-sales-in-receivables', 'total-common-preferred-stock-dividends-paid', 'long-term-debt', 'basic-shares-outstanding', 'total-assets', 'total-liabilities-share-holders-equity', 'current-ratio', 'gross-margin', 'cash-on-hand', 'long-term-debt-capital', 'total-current-assets', 'total-long-term-assets', 'inventory-turnover', 'common-stock-dividends-paid', 'cash-flow-from-operating-activities', 'total-current-liabilities', 'total-non-operating-income-expense', 'debt-equity-ratio', 'inventory', 'financial-activities-other', 'investing-activities-other', 'total-non-cash-items', 'research-development-expenses', 'change-in-inventories', 'revenue', 'total-depreciation-amortization-cash-flow', 'cost-goods-sold', 'retained-earnings-accumulated-deficit', 'total-long-term-liabilities', 'total-liabilities', 'debt-issuance-retirement-net-total', 'change-in-assets-liabilities', 'cash-flow-from-investing-activities', 'net-change-in-property-plant-equipment', 'selling-general-administrative-expenses', 'other-long-term-assets', 'change-in-accounts-payable', 'other-current-assets', 'operating-expenses', 'pre-paid-expenses', 'other-non-current-liabilities', 'gross-profit', 'total-change-in-assets-liabilities', 'stock-based-compensation', 'net-cash-flow', 'net-long-term-debt', 'net-common-equity-issued-repurchased', 'income-from-discontinued-operations', 'operating-cash-flow-per-share', 'cash-flow-from-financial-activities', 'other-non-cash-items', 'net-current-debt', 'change-in-accounts-receivable']
+
+######## SSCAS ########
+
+[(2, 0.81), (3, 0.63), (4, 0.49), (5, 0.45), (6, 0.4)]
+
+######## CLASSIFICADORES UNICOS ########
+RANDOM FOREST:(0.8403422099048078,0.5209061332690685)
+SVM:(0.7298469695143993,0.4430654295698277)
+DECISION TREE:(0.8338354018556453,0.47788890227738284)
+NAIVE BAYES:(0.45427159898782987,0.3951078443185926)
+NEURAL NETWORK:(0.6479093866730932,0.47788890227738284)
+LOGISTIC REGRESSION:(0.8138329919267382,0.44981323050969996)
+KNEIGHBORS:(0.6223641402578624,0.43655862152066516)
+XGBOOST:(0.8356428485359682,0.5147608145559706)
+
+######## CV ########
+Real Return: {'RANDOM_FOREST': 0.8121328725386239, 'SVM': 0.6441775423483977, 'DECISION_TREE': 0.8324037898438805, 'NAIVE_BAYES': 0.4469809149159123, 'NEURAL_NETWORK': 0.6782475485794333, 'LOGISTIC_REGRESSION': 0.7705175351335143, 'KNeighborsClassifier': 0.5414782233896522, 'XG_BOOST': 0.7746329389093033}
+Risk: {'RANDOM_FOREST': 0.4712479717901187, 'SVM': 0.40584574204762136, 'DECISION_TREE': 0.46710253723395123, 'NAIVE_BAYES': 0.3962820082362109, 'NEURAL_NETWORK': 0.4425996380065059, 'LOGISTIC_REGRESSION': 0.4292028803313224, 'KNeighborsClassifier': 0.4035526584970867, 'XG_BOOST': 0.46421489732846305}
+
+######## CLASSIFIERS SELECTION ########
+Real Return: ['RANDOM_FOREST', 'DECISION_TREE', 'LOGISTIC_REGRESSION', 'XG_BOOST', 'NEURAL_NETWORK']
+Risk: ['RANDOM_FOREST', 'DECISION_TREE', 'NEURAL_NETWORK', 'LOGISTIC_REGRESSION', 'XG_BOOST']
+
+######## WHITOUT DIVERSITY ########
+Real Return: RANDOM_FOREST, 0.8411856850222919
+Real Return: DECISION_TREE, 0.8338354018556453
+Real Return: LOGISTIC_REGRESSION, 0.8138329919267382
+Real Return: XG_BOOST, 0.8356428485359682
+Real Return: NEURAL_NETWORK, 0.6665863357030968
+Risk: RANDOM_FOREST, 0.5227135799493915
+Risk: DECISION_TREE, 0.47788890227738284
+Risk: NEURAL_NETWORK, 0.4452343655862152
+Risk: LOGISTIC_REGRESSION, 0.44981323050969996
+Risk: XG_BOOST, 0.5147608145559706
+
+######## BAGGING ########
+Real Return: RANDOM_FOREST, 0.8408241956862272
+Real Return: DECISION_TREE, 0.8347993734184842
+Real Return: LOGISTIC_REGRESSION, 0.8115435594649958
+Real Return: XG_BOOST, 0.8417881672490661
+Real Return: NEURAL_NETWORK, 0.6409205928425111
+Risk: RANDOM_FOREST, 0.5225930835040367
+Risk: DECISION_TREE, 0.4903000361489336
+Risk: NEURAL_NETWORK, 0.4525846487528618
+Risk: LOGISTIC_REGRESSION, 0.4493312447282805
+Risk: XG_BOOST, 0.5284974093264249
+
+######## ADABOOST ########
+RealReturn: RANDOM_FOREST, 0.8398602241233883
+RealReturn: DECISION_TREE, 0.7785275334377636
+RealReturn: LOGISTIC_REGRESSION, 0.6488733582359321
+RealReturn: XG_BOOST, 0.3214845162067719
+Risk: RANDOM_FOREST, 0.5239185444029402
+Risk: DECISION_TREE, 0.45523557055066877
+Risk: LOGISTIC_REGRESSION, 0.44065550066273046
+Risk: XG_BOOST, 0.30075912760573564
+
+######## FUSION ########
+[WHITOUT] [XG_BOOST] RealReturn: 0.9399367755532139
+[WHITOUT] [XG_BOOST] Risk: 0.7838514225500527
+[BAGGING] [XG_BOOST] RealReturn: 0.9303213909378293
+[BAGGING] [XG_BOOST] Risk: 0.785958904109589
+[ADABOOST] [XG_BOOST] RealReturn: 0.9371707060063225
+[ADABOOST] [XG_BOOST] Risk: 0.8422023182297155
+
+END: 2023-04-28 00:23:05.108809
+TOTAL EXEC: 1:36:54.803060
