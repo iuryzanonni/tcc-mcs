@@ -1,3 +1,6 @@
+('roe',43.7147)
+('roi',43.0271)
+('roa',42.2367)
 ('common-stock-net',41.4068)
 ('eps-basic-net-earnings-per-share',39.6839)
 ('asset-turnover',39.1385)
